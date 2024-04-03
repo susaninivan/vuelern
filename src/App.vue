@@ -1,20 +1,20 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+ <HomePage/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HomePage from './components/HomePage.vue'
+// Then import Bootstrap and BootstrapVue SCSS files (order is important)
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HomePage
   }
 }
 </script>
 
-<style>
+<style lang="scss" src="@/assets/styles/styles.scss" >
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
