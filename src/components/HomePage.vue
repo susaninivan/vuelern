@@ -39,7 +39,7 @@
           ></button>
           <button
             type="button"
-            data-bs-target="#carouselExampleIndicators"
+            data-bs-target="#carouselExampleAutoplaying"
             data-bs-slide-to="2"
             aria-label="Slide 3"
           ></button>
@@ -205,5 +205,27 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+$media: screen;
+// $feature: -webkit-min-device-pixel-ratio;
+// $value: 1.5;
+// @media #{$media} and ($feature: $value) {}
+@media #{$media} and (max-width: 700px){
+  .form-position{
+    padding: 30px;   
+    top: 80px;
+    right: 50px;
+    left: 50PX;
+}
+.form-control {
+      max-height: 30px;
+}
+.mb-3 {
+    margin-bottom: 0.5rem !important;
+}
+.form-label {
+    margin-bottom: .1rem;
+}
 }
 </style>
