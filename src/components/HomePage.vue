@@ -124,7 +124,8 @@
     <div class="container-fluid footer-wrapp">
       <footer>
         <div class="footer-box">
-          <p class="m-0">© Ivan GmbH {{ currentData }} </p>
+          <p class="m-0">© Ivan GmbH {{ currentData }}</p>
+          <FunkVue />
         </div>
       </footer>
     </div>
@@ -132,14 +133,17 @@
 </template>
 
 <script>
+// import FunkVue  from './components/FunkVue.vue'
+import FunkVue from "./FunkVue.vue";
 export default {
   name: "HomePage",
+  components: {
+    FunkVue,
+  },
 
   data() {
- 
     return {};
   },
-  
 
   computed: {
     currentData() {
@@ -149,8 +153,10 @@ export default {
       return `${
         now.getFullYear() +
         " " +
-        now.getDate() +  " " +  
-        now.toLocaleString('default', { month: 'long' })+ " "+               
+        now.getDate() +
+        " " +
+        now.toLocaleString("default", { month: "long" }) +
+        " " +
         now.getHours() +
         ":" +
         now.getMinutes()
@@ -158,7 +164,6 @@ export default {
     },
   },
   methods: {
-    
     // greet: function (months, month) {
     //     for (let i = 0; i < month.length; i++) {
     //       if (months == month.length) {
@@ -211,21 +216,21 @@ $media: screen;
 // $feature: -webkit-min-device-pixel-ratio;
 // $value: 1.5;
 // @media #{$media} and ($feature: $value) {}
-@media #{$media} and (max-width: 700px){
-  .form-position{
-    padding: 30px;   
+@media #{$media} and (max-width: 700px) {
+  .form-position {
+    padding: 30px;
     top: 80px;
     right: 50px;
-    left: 50PX;
-}
-.form-control {
-      max-height: 30px;
-}
-.mb-3 {
+    left: 50px;
+  }
+  .form-control {
+    max-height: 30px;
+  }
+  .mb-3 {
     margin-bottom: 0.5rem !important;
-}
-.form-label {
-    margin-bottom: .1rem;
-}
+  }
+  .form-label {
+    margin-bottom: 0.1rem;
+  }
 }
 </style>

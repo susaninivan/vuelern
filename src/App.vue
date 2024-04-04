@@ -1,17 +1,18 @@
 <template>
- <HomePage/>
+  <HomePage />
 </template>
 
 <script>
-import HomePage from './components/HomePage.vue'
+import HomePage from "./components/HomePage.vue";
+
 // Then import Bootstrap and BootstrapVue SCSS files (order is important)
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HomePage
-  }
-}
+    HomePage,
+  },
+};
 </script>
 
 <style lang="scss" src="@/assets/styles/styles.scss" >
