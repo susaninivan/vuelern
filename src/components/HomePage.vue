@@ -73,7 +73,7 @@
       </div>
 <div class="mes-group">
     <button type="submit" @click="randomItem()" class="btn btn-success">
-        Скажи что-то хорошее...
+        Скажи что-нибудь хорошее...
       </button>
       <p>{{ message }}</p>
 </div>
@@ -262,7 +262,7 @@ $media: screen;
 @media #{$media} and (max-width: 700px) {
   .form-position {
     padding: 30px;
-    top: 80px;
+    top: 300px;
     right: 50px;
     left: 50px;
   }
@@ -274,6 +274,13 @@ $media: screen;
   }
   .form-label {
     margin-bottom: 0.1rem;
+  }
+
+
+  .mes-group{
+    top: 110px;
+    left: 45px;
+    max-width: 350px;
   }
 }
 </style>
