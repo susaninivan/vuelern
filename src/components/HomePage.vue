@@ -1,20 +1,6 @@
 <template>
   <div class="container-fluid p-0">
-    <nav class="navbar bg-body-tertiary">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img
-            src="../assets/bootstrap-logo.svg"
-            alt="Logo"
-            width="30"
-            height="24"
-            class="d-inline-block align-text-top"
-          />
-          VIB
-        </a>
-        <button class="btn btn-outline-primary" type="submit">Войти</button>
-      </div>
-    </nav>
+    
     <!-- Контент здесь -->
     <div class="container-fluid p-0">
       <div
@@ -121,57 +107,58 @@
         <button type="submit" class="btn btn-primary">Войти</button>
       </form>
     </div>
-    <div class="container-fluid footer-wrapp">
+    <!-- <div class="container-fluid footer-wrapp">
       <footer>
         <div class="footer-box">
           <p class="m-0">© Ivan GmbH {{ currentData }}</p>
           <FunkVue />
         </div>
       </footer>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
 // import FunkVue  from './components/FunkVue.vue'
-import FunkVue from "./FunkVue.vue";
+// import FunkVue from "./FunkVue.vue";
+// import TopVue from "./TopVue.vue";
 export default {
   name: "HomePage",
   components: {
-    FunkVue,
+    // FunkVue    
   },
 
-  data() {
-    return {};
-  },
+  // data() {
+  //   return {};
+  // },
 
-  computed: {
-    currentData() {
-      var now = new Date();
-      // var now = new Date(2024, 3, 3);
-      // return now.getFullYear();
-      return `${
-        now.getFullYear() +
-        " " +
-        now.getDate() +
-        " " +
-        now.toLocaleString("default", { month: "long" }) +
-        " " +
-        now.getHours() +
-        ":" +
-        now.getMinutes()
-      }`;
-    },
-  },
-  methods: {
-    // greet: function (months, month) {
-    //     for (let i = 0; i < month.length; i++) {
-    //       if (months == month.length) {
-    //         return month[0];
-    //       }
-    //     }
-    //   }
-  },
+  // computed: {
+  //   currentData() {
+  //     var now = new Date();
+  //     // var now = new Date(2024, 3, 3);
+  //     // return now.getFullYear();
+  //     return `${
+  //       now.getFullYear() +
+  //       " " +
+  //       now.getDate() +
+  //       " " +
+  //       now.toLocaleString("default", { month: "long" }) +
+  //       " " +
+  //       now.getHours() +
+  //       ":" +
+  //       now.getMinutes()
+  //     }`;
+  //   },
+  // },
+  // methods: {
+  //   // greet: function (months, month) {
+  //   //     for (let i = 0; i < month.length; i++) {
+  //   //       if (months == month.length) {
+  //   //         return month[0];
+  //   //       }
+  //   //     }
+  //   //   }
+  // },
 };
 </script>
 
@@ -200,17 +187,17 @@ export default {
     color: #fff;
   }
 }
-.footer-wrapp {
-  background-color: rgb(248 249 250);
-}
+// .footer-wrapp {
+//   background-color: rgb(248 249 250);
+// }
 
-.footer-box {
-  width: 100%;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+// .footer-box {
+//   width: 100%;
+//   height: 80px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
 
 $media: screen;
 // $feature: -webkit-min-device-pixel-ratio;

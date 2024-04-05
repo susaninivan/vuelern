@@ -1,16 +1,38 @@
 <template>
-  <HomePage />
+  <!-- <router-link to="/">Home</router-link> | -->
+    <!-- <button @click ="goToCabinet">Cabinet</button>  -->
+
+  <TopVue/>
+
+  <!-- <p><strong>Текущий путь маршрута:</strong> {{ $route.fullPath }}</p> -->
+  <!-- <nav>
+    <RouterLink to="/">Go to Home</RouterLink>
+    <RouterLink to="/cabinet">Go to cabinet</RouterLink>
+  </nav> -->
+  <main>
+    <RouterView />
+  </main>
+  <FooterVue />
 </template>
 
 <script>
-import HomePage from "./components/HomePage.vue";
-
+// import HomePage from "./components/HomePage.vue";
+import TopVue from "./components/TopVue.vue";
+import FooterVue from "./components/FooterVue.vue";
 // Then import Bootstrap and BootstrapVue SCSS files (order is important)
 
 export default {
   name: "App",
   components: {
-    HomePage,
+    TopVue,
+    // HomePage,
+    FooterVue,
+  },
+
+  methods: {
+    goToCabinet() {
+      this.$router.push("/cabinet");
+    },
   },
 };
 </script>

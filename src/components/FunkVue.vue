@@ -1,7 +1,7 @@
 <template>
   <!-- <button @click="firstTask(); secondTask();">Нажми на меня</button> -->
   <!-- <button @click="handleTasks">Нажми на меня</button> -->
-  <a @click="performTasksWithCare()">Узнать дату и время</a>
+  <a @click="performTasksWithCare()"> Узнать дату и время</a>
   {{ message }}
   <!-- ver.2 -->
   <!-- <button @click="executeAllTasks">Нажми на меня</button> -->
