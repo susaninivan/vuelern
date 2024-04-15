@@ -121,6 +121,47 @@
         </div>
       </footer>
     </div> -->
+  <section id="section3">
+<h2>Custom player and visualizer style</h2>
+<midi-player
+  src="https://cdn.jsdelivr.net/gh/cifkao/html-midi-player@2b12128/jazz.mid"
+  sound-font visualizer="#section3 midi-visualizer">
+</midi-player>
+<midi-visualizer
+  src="https://cdn.jsdelivr.net/gh/cifkao/html-midi-player@2b12128/jazz.mid">
+</midi-visualizer>
+</section>
+
+<section id="section1">
+<h2>1 player, 2 visualizers</h2>
+<midi-visualizer
+  type="piano-roll"
+  src="../assets/midi/1.mid">
+</midi-visualizer>
+<midi-visualizer
+  type="staff"
+  src="../assets/midi/1.mid">
+</midi-visualizer>
+<midi-player
+  src="../assets/midi/1.mid"
+  sound-font visualizer="#section1 midi-visualizer">
+</midi-player>
+</section>
+
+<section id="section2">
+<h2>2 players, 1 visualizer</h2>
+<midi-player
+  src="../assets/midi/1.mid"
+  sound-font visualizer="#section2 midi-visualizer">
+</midi-player>
+<midi-player
+  src="../assets/midi/1.mid"
+  sound-font visualizer="#section2 midi-visualizer">
+</midi-player>
+<midi-visualizer
+  type="piano-roll">
+</midi-visualizer>
+</section>
   </div>
 </template>
 

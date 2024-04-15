@@ -5,10 +5,10 @@
   <TopVue/>
 
   <!-- <p><strong>Текущий путь маршрута:</strong> {{ $route.fullPath }}</p> -->
-  <!-- <nav>
+  <nav>
     <RouterLink to="/">Go to Home</RouterLink>
     <RouterLink to="/cabinet">Go to cabinet</RouterLink>
-  </nav> -->
+  </nav>
   <main>
     <RouterView />
   </main>
