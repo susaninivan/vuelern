@@ -3,7 +3,7 @@
     <h1>Кабинет пользователя</h1>
     <p><strong>Текущий путь маршрута:</strong> {{ $route.fullPath }}</p>
     <button type="button" class="btn btn-primary" @click="openModal">
-      Подробнее
+      Открыть мод. окно
     </button>
     <ModalVue
       v-if="isModalOpen"
@@ -37,20 +37,23 @@
         </p>
       </div>
     </ModalVue>
-    
+    <SignUp/>
 
     <audio controls>
       <!-- <source src="../assets/midi/2.ogg" type="audio/ogg" /> -->
-      <source src="../assets/midi/2.mp3" type="audio/mpeg" />
+      <source src="../assets/mp3/2.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
+    
   </div>
 </template>
 
 <script>
 import ModalVue from "./ModalVue";
+import SignUp from "./SignUp.vue";
+
 export default {
-  components: { ModalVue },
+  components: { ModalVue, SignUp },
   name: "CabinetPage",
   data() {
     return {

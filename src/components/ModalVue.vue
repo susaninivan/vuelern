@@ -17,8 +17,8 @@
         </div>
         <div
           class="modal-body"
-          ref="modalBody"
-          @scroll="onBodyScroll"
+         
+          @scroll="onScroll"
         >
           <slot></slot>
         </div>
@@ -46,6 +46,7 @@
 </template>
 
 <script>
+import scrollHandler from "../mixins/scrollHandler"
 export default {
   name: "ModalVue",
   props: {
@@ -54,6 +55,7 @@ export default {
       default: ''
     }
   },
+  mixins: [scrollHandler],
   data() {
     return {
       isRulesReaded: false
@@ -66,11 +68,15 @@ export default {
     closeModal() {
       this.$emit('close')
     },
-    onBodyScroll() {
-      const modalBody = this.$refs.modalBody
-      if (modalBody.clientHeight + modalBody.scrollTop >= modalBody.scrollHeight) {
-        this.isRulesReaded = true
-      }
+    // onBodyScroll() {
+    //   const modalBody = this.$refs.modalBody
+    //   if (modalBody.clientHeight + modalBody.scrollTop >= modalBody.scrollHeight) {
+    //     this.isRulesReaded = true
+    //   }
+    // }
+
+    onScrollEnd (){
+      this.isRulesReaded = true
     }
   }
 }

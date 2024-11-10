@@ -71,13 +71,12 @@
           <span class="visually-hidden">Следующий</span>
         </button>
       </div>
-<div class="mes-group">
-    <button type="submit" @click="randomItem()" class="btn btn-success">
-        Скажи что-нибудь хорошее...
-      </button>
-      <p>{{ message }}</p>
-</div>
-    
+      <div class="mes-group">
+        <button type="submit" @click="randomItem()" class="btn btn-success">
+          Скажи что-нибудь хорошее...
+        </button>
+        <p>{{ message }}</p>
+      </div>
     </div>
 
     <div class="form-position">
@@ -121,47 +120,7 @@
         </div>
       </footer>
     </div> -->
-  <section id="section3">
-<h2>Custom player and visualizer style</h2>
-<midi-player
-  src="https://cdn.jsdelivr.net/gh/cifkao/html-midi-player@2b12128/jazz.mid"
-  sound-font visualizer="#section3 midi-visualizer">
-</midi-player>
-<midi-visualizer
-  src="https://cdn.jsdelivr.net/gh/cifkao/html-midi-player@2b12128/jazz.mid">
-</midi-visualizer>
-</section>
-
-<section id="section1">
-<h2>1 player, 2 visualizers</h2>
-<midi-visualizer
-  type="piano-roll"
-  src="../assets/midi/1.mid">
-</midi-visualizer>
-<midi-visualizer
-  type="staff"
-  src="../assets/midi/1.mid">
-</midi-visualizer>
-<midi-player
-  src="../assets/midi/1.mid"
-  sound-font visualizer="#section1 midi-visualizer">
-</midi-player>
-</section>
-
-<section id="section2">
-<h2>2 players, 1 visualizer</h2>
-<midi-player
-  src="../assets/midi/1.mid"
-  sound-font visualizer="#section2 midi-visualizer">
-</midi-player>
-<midi-player
-  src="../assets/midi/1.mid"
-  sound-font visualizer="#section2 midi-visualizer">
-</midi-player>
-<midi-visualizer
-  type="piano-roll">
-</midi-visualizer>
-</section>
+    
   </div>
 </template>
 
@@ -283,17 +242,17 @@ export default {
 //   justify-content: center;
 //   align-items: center;
 // }
-.mes-group{
+.mes-group {
   position: absolute;
   top: 260px;
-    left: 200px;
-      background: #b8b8b86b;
-     padding: 25px;
-    max-width: 500px;
-    p {
-      padding-top: 10px;
-      color: #fff;
-    }
+  left: 200px;
+  background: #b8b8b86b;
+  padding: 25px;
+  max-width: 500px;
+  p {
+    padding-top: 10px;
+    color: #fff;
+  }
 }
 
 $media: screen;
@@ -317,8 +276,7 @@ $media: screen;
     margin-bottom: 0.1rem;
   }
 
-
-  .mes-group{
+  .mes-group {
     top: 110px;
     left: 45px;
     max-width: 350px;
